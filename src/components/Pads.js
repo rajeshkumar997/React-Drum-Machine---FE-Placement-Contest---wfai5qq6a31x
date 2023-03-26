@@ -7,7 +7,7 @@ function Pads({power,volume}) {
     const keypadCode = Object.keys(bank1);
 
 
-    const playSound = e => {
+    const playSound = (e) => {
         const audio = document.getElementById(e.target.innerText);
         audio.volume = volume;
         audio.currentTime = 0;
@@ -25,7 +25,9 @@ function Pads({power,volume}) {
               id={pad+idx}
               key={pad+idx}
               handleClick={playSound}
-              element={pad} />
+              element={pad} 
+              power={power}
+    />
           );
         })}
         <div id='display'>Play a sound!</div>  
