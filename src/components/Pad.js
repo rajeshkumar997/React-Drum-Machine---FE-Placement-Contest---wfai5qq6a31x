@@ -2,6 +2,7 @@ import React from "react";
 import {bank1} from "./App"
 
 function Pad({handleClick, power, backgroundStyle, element, id }) {
+    const backgroundStyle = power ? "orange" : "gray";
     return (
       <button 
         data-tag={id}
